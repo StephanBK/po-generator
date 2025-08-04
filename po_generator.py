@@ -29,7 +29,7 @@ packaging = st.number_input("Packaging ($)", value=0.00, step=0.01)
 shipping = st.number_input("Shipping & Handling ($)", value=0.00, step=0.01)
 
 if uploaded_file and st.button("Generate PO PDF"):
-    df = pd.read_excel(uploaded_file, sheet_name="Glass", skiprows=11)
+    df = pd.read_excel(uploaded_file, sheet_name="Glass", skiprows=10)
     df.columns = [
         "Item", "Width (in)", "Width (frac)", "Height (in)", "Height (frac)",
         "Area Each (ft²)", "Qty", "Area Total (ft²)"
